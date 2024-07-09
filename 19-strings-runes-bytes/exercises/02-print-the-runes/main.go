@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Print the runes
 //
@@ -33,4 +38,9 @@ package main
 
 func main() {
 	const word = "console"
+
+	fmt.Printf("%-10s %-10s %-10s\n%v\n", "dec:", "hex:", "bin:", strings.Repeat("=", 30))
+	for _, r := range word {
+		fmt.Printf("%-10d % -10[1]x %-10[1]b\n", r)
+	}
 }
